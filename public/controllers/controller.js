@@ -1,49 +1,26 @@
 var myApp = angular.module('myApp', []);
 myApp.controller('AppCtrl', ['$scope', '$http', function($scope, $http) {
-    console.log("Hello World from controller");
+  console.log("Hello World from controller");
 
 
-var refresh = function() {
-  $http.getHome('/personal').success(function(response) {
-    console.log("I got the data I requested");
-    $scope.contactlist = response;
-    $scope.contact = "";
-  });
-};
+  var refresh = function () {
+    $http.get('/project').success(function (response) {
+      console.log("I got the data I requested");
+      $scope.projectlist = response;
+      $scope.project = "";
+    });
+    $http.get('/skills').success(function (response) {
+      console.log("I got the data I requested");
+      $scope.skilllist = response;
+      $scope.skill = "";
+    });
+    $http.get('/edu').success(function (response) {
+      console.log("I got the data I requested");
+      $scope.edulist = response;
+      $scope.edu = "";
+    });
+  };
 
-refresh();
-
-$scope.addContact = function() {
-  console.log($scope.contact);
-  $http.post('/personal', $scope.contact).success(function(response) {
-    console.log(response);
-    refresh();
-  });
-};
-
-$scope.remove = function(id) {
-  console.log(id);
-  $http.delete('/personal/' + id).success(function(response) {
-    refresh();
-  });
-};
-
-$scope.edit = function(id) {
-  console.log(id);
-  $http.get('/personal/' + id).success(function(response) {
-    $scope.contact = response;
-  });
-};  
-
-$scope.update = function() {
-  console.log($scope.contact._id);
-  $http.put('/personal/' + $scope.contact._id, $scope.contact).success(function(response) {
-    refresh();
-  })
-};
-
-$scope.deselect = function() {
-  $scope.contact = "";
-}
+  refresh();
 
 }]);
