@@ -1,5 +1,5 @@
 <!DOCTYPE>
-<html ng-app="Fernando Montes">
+<html ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -26,17 +26,15 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="Home">Home</a></li>
-                    <li><a href="AboutMe">About Me</a></li>
-                    <li><a href="Experience">Experience</a></li>
-                    <li><a href="Portfolio">Portfolio</a></li>
-                    <li><a href="Contact">Contact</a></li>
+                    <li><button class="btn btn-default navbar-btn" ng-click="primary()">Home</button></li>
+                    <li><button class="btn btn-default navbar-btn" ng-click="education()">Education</button></li>
+                    <li><button class="btn btn-default navbar-btn" ng-click="skills()">Skills</button></li>
+                    <li><button class="btn btn-default navbar-btn" ng-click="projects()">Pojects</button></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <h1>Contact List App</h1>
 
     <table class="table">
         <thead>

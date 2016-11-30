@@ -1,0 +1,32 @@
+{
+ 	"type":"edu",
+	"school": "Cal State LA",
+	"degree": "Computer Science",
+	"last_year":"2017"
+}
+{
+ 	"type":"skill",
+	"skill":"C++"
+}
+{
+ 	"type":"skill",
+	"skill":"Java"
+}
+{
+ 	"type":"skill",
+	"skill":"Javascript"
+}
+{
+ 	"type":"skill",
+	"skill":"Python"
+}
+{
+	"type":"project",
+	"title":"CMS/CMDB",
+	"description":"Building a Configuration Management System for QTC. To help with tracking assets"
+}
+{
+	"type":"project",
+	"title":"Swarmathon",
+	"description":"Working with small rovers with a hive mind to collect cubes and bring them back to home base."
+}
