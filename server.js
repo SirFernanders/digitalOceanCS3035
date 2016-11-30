@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 
 
-app.get('/edu/', function (req, res) {
+app.get('/edu', function (req, res) {
   console.log('I received a GET request');
 
   db.fernando.find({type: "edu"},function (err, docs) {
@@ -22,7 +22,7 @@ app.get('/edu/', function (req, res) {
   });
 });
 
-app.get('/skills/', function (req, res) {
+app.get('/skills', function (req, res) {
   console.log('I received a GET request');
 
   db.fernando.find({type: "skill"},function (err, docs) {
@@ -32,7 +32,7 @@ app.get('/skills/', function (req, res) {
 });
 
 
-app.get('/project/', function (req, res) {
+app.get('/project', function (req, res) {
   console.log('I received a GET request');
 
   db.fernando.find({type: "project"},function (err, docs) {
